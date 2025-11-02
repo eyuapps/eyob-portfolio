@@ -8,10 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Accent palette now references CSS variables so light/dark modes can override via :root / .dark
+        // Tailwind will use these RGB variable references; variables are defined in `src/index.css`.
         accent: {
-          400: '#00f5ff',
-          500: '#00d4ff',
-          600: '#0099ff',
+          400: 'rgb(var(--accent-400) / <alpha-value>)',
+          500: 'rgb(var(--accent-500) / <alpha-value>)',
+          600: 'rgb(var(--accent-600) / <alpha-value>)',
         },
         dark: {
           900: '#0a0a0a',

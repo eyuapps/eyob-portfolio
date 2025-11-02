@@ -33,8 +33,8 @@ const Skills = () => {
     {
       icon: HiFilm,
       title: 'Video Editing',
-      description: 'Editing and producing engaging video content',
-      level: 'Intermediate',
+      description: 'Editing and producing engaging video content ',
+      level: 'Intermediate\n',
       color: 'from-orange-500 to-red-500'
     }
   ]
@@ -154,7 +154,7 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        {/* Progress Overview */}
+        {/* Progress Overview — modern horizontal progress bars */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -165,37 +165,51 @@ const Skills = () => {
           <h3 className="text-2xl font-bold mb-6 text-center text-accent-400">
             Skill Development Journey
           </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skill) => (
-              <div key={skill.title} className="text-center">
-                <div className="relative w-20 h-20 mx-auto mb-3">
-                  <svg className="w-full h-full" viewBox="0 0 36 36">
-                    <path
-                      d="M18 2.0845
-                        a 15.9155 15.9155 0 0 1 0 31.831
-                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="#333"
-                      strokeWidth="3"
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {skills.map((skill) => {
+              const percent = skill.level === 'Advanced' ? 85 : 70
+              return (
+                <div key={skill.title} className="p-4 bg-transparent">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 rounded-full bg-accent-500 flex-shrink-0" />
+                      <h4 className="font-semibold text-sm text-left">{skill.title}</h4>
+                    </div>
+                    <div className="text-sm font-medium text-gray-300 tabular-nums">{percent}%</div>
+                  </div>
+
+                  <div className="w-full bg-dark-700/60 dark:bg-white/5 h-3 rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all duration-700"
+                      style={{ width: `${percent}%`, background: 'linear-gradient(90deg, rgb(var(--accent-500)), rgb(var(--accent-400)))' }}
+                      role="progressbar"
+                      aria-valuenow={percent}
+                      aria-valuemin="0"
+                      aria-valuemax="100"
                     />
-                    <path
-                      d="M18 2.0845
-                        a 15.9155 15.9155 0 0 1 0 31.831
-                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke={skill.level === 'Advanced' ? '#00d4ff' : '#0099ff'}
-                      strokeWidth="3"
-                      strokeDasharray={`${skill.level === 'Advanced' ? 85 : 70}, 100`}
-                    />
-                    <text x="18" y="20.5" className="text-[10px] fill-white font-bold">
-                      {skill.level === 'Advanced' ? '85%' : '70%'}
-                    </text>
-                  </svg>
+                  </div>
+
+                  {/* Description above level (muted) */}
+                  <div className="mt-3 text-center">
+                    <p className="text-xs text-gray-400 leading-snug">{skill.description}</p>
+                  </div>
+
+                  {/* Level pill below the description with gradient background */}
+                  <div className="mt-3 flex items-center justify-center">
+                    <span
+                      className="px-3 py-1 rounded-full text-sm font-semibold uppercase tracking-wide shadow-sm"
+                      style={{
+                        background: 'linear-gradient(90deg, rgb(var(--accent-500)), rgb(var(--accent-400)))',
+                        color: 'white'
+                      }}
+                    >
+                      {skill.level}
+                    </span>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-sm">{skill.title}</h4>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </motion.div>
       </div>

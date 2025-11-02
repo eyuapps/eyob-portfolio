@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Accent color variables (RGB triplets) — light mode uses a higher-contrast blue, dark mode uses teal
+   Values are defined as space-separated R G B so they can be used with the Tailwind rgb(var(--...) / <alpha>) pattern. */
+:root {
+  /* Light mode (more contrast on white backgrounds) */
+  --accent-400: 95 150 255; /* #5F96FF */
+  --accent-500: 11 95 255;  /* #0B5FFF */
+  --accent-600: 0 70 200;   /* #0046C8 */
+}
+
+.dark {
+  /* Dark mode (teal, previously used accent) */
+  --accent-400: 94 234 212; /* #5eead4 */
+  --accent-500: 20 184 166; /* #14b8a6 */
+  --accent-600: 13 148 136; /* #0d9488 */
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -45,20 +61,21 @@
   }
 
   .neon-glow {
-    box-shadow: 
-      0 0 5px #00f5ff,
-      0 0 20px rgba(0, 212, 255, 0.3),
-      0 0 35px rgba(0, 153, 255, 0.2);
+    /* Use accent CSS variables for a consistent glow that changes with light/dark mode */
+    box-shadow:
+      0 0 5px rgb(var(--accent-400) / 1),
+      0 0 20px rgb(var(--accent-500) / 0.3),
+      0 0 35px rgb(var(--accent-600) / 0.2);
   }
 
   .neon-border {
-    box-shadow: 
-      0 0 0 1px rgba(0, 245, 255, 0.5),
-      inset 0 0 0 1px rgba(0, 245, 255, 0.5);
+    box-shadow:
+      0 0 0 1px rgb(var(--accent-400) / 0.5),
+      inset 0 0 0 1px rgb(var(--accent-400) / 0.5);
   }
 
   .text-glow {
-    text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+    text-shadow: 0 0 10px rgb(var(--accent-400) / 0.5);
   }
 
   .skip-to-content {
