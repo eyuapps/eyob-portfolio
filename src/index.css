@@ -100,7 +100,7 @@
   }
 }
 
-/* Quick light mode text fix */
+/* Quick light mode text fix 
 .light {
   color: #1f2937;
 }
@@ -121,4 +121,4 @@
 .light .glass *,
 .light .glass-dark * {
   color: inherit;
-}
+}*/
