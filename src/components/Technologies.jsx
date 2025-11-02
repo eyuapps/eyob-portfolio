@@ -102,17 +102,19 @@ const Technologies = () => {
                 scale: 1.1,
                 y: -5
               }}
-              className="group relative"
+              className="group relative mx-2 my-2"
             >
               <div 
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 aspect-square flex flex-col items-center justify-center transition-all duration-300 group-hover:border-accent-500/50"
+                className="bg-white/80 dark:bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-1 aspect-square flex flex-col items-center justify-center transition-all duration-300 group-hover:border-accent-500/50 shadow-md dark:shadow-none"
                 role="img"
                 aria-label={tech.name}
               >
-                <tech.icon 
-                  className={`w-8 h-8 ${tech.color} group-hover:scale-110 transition-transform duration-300`} 
-                />
-                <span className="text-xs mt-2 text-gray-300 group-hover:text-white text-center">
+                {/* Icon container with rounded corners and elevated shadow for better light-mode visibility */}
+                <div className="p-0 rounded-md bg-white/95 dark:bg-dark-800 shadow-sm dark:shadow-none flex items-center justify-center mb-1 transition-transform duration-300 group-hover:scale-105">
+                  <tech.icon className={`w-10 h-10 ${tech.color}`} />
+                </div>
+
+                <span className="text-xs font-normal text-gray-400 group-hover:text-white text-center tracking-wide" style={{ fontFamily: 'ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial' }}>
                   {tech.name}
                 </span>
               </div>
@@ -135,8 +137,8 @@ const Technologies = () => {
             { title: 'Productivity', count: '3+ Platforms', color: 'bg-orange-500/20' }
           ].map((category) => (
             <div key={category.title} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 text-center">
-              <div className={`w-12 h-12 ${category.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
-                <div className="w-6 h-6 bg-accent-500 rounded-full"></div>
+              <div className={`w-12 h-12 ${category.color} rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg` }>
+                <div className="w-6 h-6 bg-accent-500 rounded-full shadow-md"></div>
               </div>
               <h3 className="font-semibold mb-1">{category.title}</h3>
               <p className="text-sm text-gray-300">{category.count}</p>
