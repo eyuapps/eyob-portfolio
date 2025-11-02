@@ -104,7 +104,7 @@ const About = () => {
               </div>
 
               <p className="text-gray-700 dark:text-gray-300">
-                I'm Eyob, an IT student at Dire Dawa University. I build lightweight, reliable mobile apps 
+                I'm Eyob, an IT student at Dire Dawa University.eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee I build lightweight, reliable mobile apps 
                 and clean web interfaces. I also design graphics and edit videos — everything I ship is 
                 practical and optimized for performance.
               </p>
