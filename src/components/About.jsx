@@ -68,7 +68,7 @@ const About = () => {
                 className="absolute -bottom-4 -right-4 glass px-6 py-3 rounded-lg neon-glow"
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-accent-400">2+</div>
+                  <div className="text-2xl font-bold text-accent-400">5+</div>
                   <div className="text-sm">Years Experience</div>
                 </div>
               </motion.div>
