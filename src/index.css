@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-white dark:bg-dark-900 text-gray-800 dark:text-white antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200 dark:bg-dark-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-400;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/80 dark:bg-white/5 backdrop-blur-md border border-gray-300 dark:border-white/10;
+  }
+
+  .glass-dark {
+    @apply bg-gray-100/90 dark:bg-dark-800/80 backdrop-blur-md border border-gray-300 dark:border-white/5;
+  }
+
+  .neon-glow {
+    box-shadow: 
+      0 0 5px #00f5ff,
+      0 0 20px rgba(0, 212, 255, 0.3),
+      0 0 35px rgba(0, 153, 255, 0.2);
+  }
+
+  .neon-border {
+    box-shadow: 
+      0 0 0 1px rgba(0, 245, 255, 0.5),
+      inset 0 0 0 1px rgba(0, 245, 255, 0.5);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+  }
+
+  .skip-to-content {
+    @apply absolute -top-12 left-4 bg-accent-500 text-white px-4 py-2 rounded-lg font-semibold z-50 transition-transform;
+  }
+
+  .skip-to-content:focus {
+    @apply top-4;
+  }
+}
+
+/* Light mode specific overrides */
+.light {
+  /* Ensure good text contrast */
+  .text-gray-300 {
+    @apply text-gray-700;
+  }
+  
+  .text-gray-400 {
+    @apply text-gray-600;
+  }
+  
+  /* Glass effects for light mode */
+  .glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #374151;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Quick light mode text fix */
+.light {
+  color: #1f2937;
+}
+
+.light .text-gray-300 {
+  color: #4b5563 !important;
+}
+
+.light .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+.light .glass,
+.light .glass-dark {
+  color: #1f2937;
+}
+
+.light .glass *,
+.light .glass-dark * {
+  color: inherit;
+}
