@@ -210,7 +210,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-800 border border-white/10 rounded-lg focus:outline-none focus:border-accent-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-white/60 text-dark-900 border border-gray-200/40 rounded-lg shadow-sm focus:outline-none focus:border-accent-500 transition-colors duration-300 dark:bg-dark-800 dark:text-white dark:border-white/10"
                       placeholder="Your full name"
                     />
                   </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-800 border border-white/10 rounded-lg focus:outline-none focus:border-accent-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-white/60 text-dark-900 border border-gray-200/40 rounded-lg shadow-sm focus:outline-none focus:border-accent-500 transition-colors duration-300 dark:bg-dark-800 dark:text-white dark:border-white/10"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -242,7 +242,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows="6"
-                      className="w-full px-4 py-3 bg-dark-800 border border-white/10 rounded-lg focus:outline-none focus:border-accent-500 transition-colors duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-white/60 text-dark-900 border border-gray-200/40 rounded-lg shadow-sm focus:outline-none focus:border-accent-500 transition-colors duration-300 resize-none dark:bg-dark-800 dark:text-white dark:border-white/10"
                       placeholder="Tell me about your project..."
                     ></textarea>
                   </div>

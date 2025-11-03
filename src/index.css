@@ -90,19 +90,43 @@
 /* Light mode specific overrides */
 .light {
   /* Ensure good text contrast */
-  .text-gray-300 {
-    @apply text-gray-700;
-  }
-  
-  .text-gray-400 {
-    @apply text-gray-600;
-  }
-  
-  /* Glass effects for light mode */
+  .text-gray-300 { @apply text-gray-700; }
+  .text-gray-400 { @apply text-gray-600; }
+
+  /* Liven up glass surfaces on light mode: brighter, warmer, with soft shadows */
   .glass {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #374151;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    color: #0f172a; /* neutral-900 */
+    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
+    backdrop-filter: blur(6px);
+  }
+
+  /* Header glass variant for light mode: subtle frosted white with soft border */
+  .glass-dark {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(2, 6, 23, 0.06);
+    color: #0f172a;
+    box-shadow: 0 6px 24px rgba(2, 6, 23, 0.05);
+  }
+
+  /* Softer neon/glow tuned for light backgrounds */
+  .neon-glow {
+    box-shadow:
+      0 0 6px rgb(var(--accent-400) / 0.9),
+      0 0 18px rgb(var(--accent-500) / 0.35),
+      0 6px 30px rgba(2,6,23,0.06);
+  }
+
+  .neon-border {
+    box-shadow:
+      0 0 0 1px rgb(var(--accent-400) / 0.45),
+      inset 0 0 0 1px rgb(var(--accent-400) / 0.25);
+  }
+
+  /* Make interactive controls more prominent in light mode */
+  button, a {
+    transition: transform .18s ease, box-shadow .18s ease;
   }
 }
 

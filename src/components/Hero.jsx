@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { HiArrowDown, HiMail } from 'react-icons/hi'
+import { HiArrowDown } from 'react-icons/hi'
+import { FaReact, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { SiAndroid, SiNodedotjs, SiJavascript, SiTailwindcss } from 'react-icons/si'
 
 const Hero = () => {
   const scrollToSection = (href) => {
@@ -11,108 +13,88 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen relative flex items-center justify-center overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-36"
+      style={{ scrollMarginTop: '96px' }}
+    >
       {/* Background with subtle parallax */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-accent-100 dark:from-dark-900 dark:via-dark-800 dark:to-accent-900/20"></div>
-        
+
         {/* Animated background shapes */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-float-delayed"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6">
+
+          {/* Left column: intro, role, social and tech icons */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            transition={{ duration: 0.7 }}
+            className="w-full lg:w-1/2 flex flex-col items-start space-y-6"
           >
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-5xl lg:text-7xl font-bold mb-6"
-            >
-              <span className="block">Eyob</span>
-              <span className="block text-accent-400 text-glow">Tesfaye</span>
-            </motion.h1>
+            <div className="glass rounded-2xl px-6 py-5 shadow-lg w-full max-w-lg">
+              <p className="text-sm text-gray-400">Well Hello There, I am</p>
+              <h2 className="text-3xl font-bold text-accent-400">Eyob Tesfaye</h2>
+            </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl lg:text-2xl text-gray-300 mb-8"
-            >
-              IT Student — Mobile App & Web Developer, Graphics & Video
-            </motion.p>
+            <div className="rounded-2xl px-6 py-5 shadow-sm w-full max-w-md border border-accent-400/25 bg-transparent">
+              <p className="text-base text-gray-900 dark:text-white font-semibold">Building secure, user-first digital experiences.</p>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <button
-                onClick={() => scrollToSection('#projects')}
-                className="group relative px-8 py-4 bg-accent-500 text-dark-900 rounded-lg font-semibold overflow-hidden transition-all duration-300 hover:neon-glow hover:scale-105"
-              >
-                <span className="relative z-10">View Work</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-accent-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-              </button>
+            {/* Social row */}
+            <div className="flex items-center gap-3">
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-blue-600 shadow" href="#" aria-label="LinkedIn">
+                <FaLinkedinIn className="w-4 h-4" />
+              </a>
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-sky-500 shadow" href="#" aria-label="Twitter">
+                <FaTwitter className="w-4 h-4" />
+              </a>
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-pink-500 shadow" href="#" aria-label="Instagram">
+                <FaInstagram className="w-4 h-4" />
+              </a>
+            </div>
 
-              <button
-                onClick={() => scrollToSection('#contact')}
-                className="group relative px-8 py-4 glass rounded-lg font-semibold overflow-hidden transition-all duration-300 hover:neon-border hover:scale-105"
-              >
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  <HiMail className="w-5 h-5" />
-                  Contact Me
-                </span>
-              </button>
-            </motion.div>
+            {/* Tech icons: vertical on desktop, horizontal on mobile */}
+            <div className="mt-2">
+              <div className="hidden lg:flex flex-col items-start space-y-4">
+                {[
+                  { icon: <FaReact className="w-6 h-6 text-sky-400" />, key: 'react' },
+                  { icon: <SiTailwindcss className="w-6 h-6 text-cyan-400" />, key: 'tailwind' },
+                  { icon: <SiNodedotjs className="w-6 h-6 text-green-600" />, key: 'node' },
+                  { icon: <SiJavascript className="w-6 h-6 text-yellow-400" />, key: 'js' },
+                  { icon: <SiAndroid className="w-6 h-6 text-green-400" />, key: 'android' },
+                ].map((it, idx) => (
+                  <motion.div key={it.key} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: [0, -6, 0] }} transition={{ delay: 0.12 * idx, duration: 2, repeat: Infinity }} className="w-12 h-12 bg-white/90 dark:bg-dark-700 rounded-full flex items-center justify-center shadow-lg">
+                    {it.icon}
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="flex lg:hidden items-center gap-3 mt-4">
+                {[
+                  { icon: <FaReact className="w-5 h-5 text-sky-400" />, key: 'react-m' },
+                  { icon: <SiTailwindcss className="w-5 h-5 text-cyan-400" />, key: 'tailwind-m' },
+                  { icon: <SiNodedotjs className="w-5 h-5 text-green-600" />, key: 'node-m' },
+                  { icon: <SiJavascript className="w-5 h-5 text-yellow-400" />, key: 'js-m' },
+                  { icon: <SiAndroid className="w-5 h-5 text-green-400" />, key: 'android-m' },
+                ].map((it, idx) => (
+                  <motion.div key={it.key} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: [0, -4, 0] }} transition={{ delay: 0.08 * idx, duration: 2, repeat: Infinity }} className="w-10 h-10 bg-white/90 dark:bg-dark-700 rounded-full flex items-center justify-center shadow-md">
+                    {it.icon}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
-              {/* Glass card background */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="absolute inset-0 glass rounded-3xl rotate-6"
-              ></motion.div>
-              
-              {/* Profile image */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7, duration: 0.8 }}
-                className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-accent-500/30"
-              >
-                <img
-                  src="/assets/profile.jpg"
-                  alt="Eyob Tesfaye - IT Student and Developer"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-
-              {/* Floating elements */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -bottom-4 -left-4 glass px-4 py-2 rounded-lg"
-              >
-                <span className="text-sm font-semibold text-accent-400">Available for Work</span>
-              </motion.div>
+          {/* Right column: landing photo only (no icons) */}
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] rounded-3xl overflow-hidden shadow-2xl">
+              <img src="/assets/profile.jpg" alt="Eyob Tesfaye" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </div>
