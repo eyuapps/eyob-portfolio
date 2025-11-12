@@ -12,6 +12,13 @@ const Hero = () => {
     }
   }
 
+const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/downloads/wdaseegzi.apk"; // use absolute path from public
+    link.download = "wdaseegzi.apk";
+    link.click();
+  };
+
   return (
     <section
       id="home"
@@ -29,6 +36,11 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6">
+
+  <div>
+      <button onClick={handleDownload}>Download Example PDF</button>
+    </div>
+
 
           {/* Left column: intro, role, social and tech icons */}
           <motion.div
