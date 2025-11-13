@@ -27,7 +27,7 @@ const Contact = () => {
     },
     {
       icon: SiGmail,
-      url: 'mailto:youremail@example.com',
+      url: 'mailto:eyuapps@gmail.com',
       label: 'Gmail',
       color: 'text-red-400 hover:text-red-300'
     }
@@ -58,14 +58,14 @@ const Contact = () => {
   }
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('youremail@example.com')
+    navigator.clipboard.writeText('eyuapps@gmail.com')
     // You can add a toast notification here
   }
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/downloads/WUDASE.signed.apk"; // use absolute path from public
-    link.download = "WUDASE.signed.apk";
+    link.href = "/downloads/WUDASE.apk"; // use absolute path from public
+    link.download = "WUDASE.apk";
     link.click();
   };
 
@@ -111,7 +111,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold">Email</h4>
                     <div className="flex items-center gap-2">
-                      <p className="text-gray-300">youremail@example.com</p>
+                      <p className="text-gray-300">eyuapps@gmail.com</p>
                       <button
                         onClick={copyEmail}
                         className="text-sm text-accent-400 hover:text-accent-300 transition-colors"
