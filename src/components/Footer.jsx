@@ -110,11 +110,11 @@ const Footer = () => {
               <p className="text-white dark:text-gray-300">
                 <strong>Email:</strong>{' '}
                 <a href="mailto:youremail@example.com" className="text-accent-400 hover:underline">
-                  youremail@example.com
+                  eyuapps@gmail.com
                 </a>
               </p>
               <p className="text-white dark:text-gray-300">
-                <strong>Location:</strong> Available Worldwide
+                <strong>Location:</strong> Available Dire Dawa
               </p>
               <p className="text-white dark:text-gray-300">
                 <strong>Status:</strong> Open for Opportunities
@@ -153,9 +153,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="text-center mt-8"
         >
-          <p className="text-white/80 dark:text-gray-500 text-xs">
-            Built with React, TailwindCSS & Framer Motion • Deployed on Vercel
-          </p>
+        
         </motion.div>
       </div>
     </footer>
