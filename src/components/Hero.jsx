@@ -12,12 +12,12 @@ const Hero = () => {
     }
   }
 
-const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/downloads/wdaseegzi.apk"; // use absolute path from public
-    link.download = "wdaseegzi.apk";
-    link.click();
-  };
+// const handleDownload = () => {
+//     const link = document.createElement("a");
+//     link.href = "/downloads/wdaseegzi.apk"; // use absolute path from public
+//     link.download = "wdaseegzi.apk";
+//     link.click();
+//   };
 
   return (
     <section
@@ -37,9 +37,9 @@ const handleDownload = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6">
 
-  <div>
+  {/* <div>
       <button onClick={handleDownload}>Download Example PDF</button>
-    </div>
+    </div> */}
 
 
           {/* Left column: intro, role, social and tech icons */}

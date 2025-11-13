@@ -62,6 +62,13 @@ const Contact = () => {
     // You can add a toast notification here
   }
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/downloads/WUDASE.signed.apk"; // use absolute path from public
+    link.download = "WUDASE.signed.apk";
+    link.click();
+  };
+
   return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -147,7 +154,7 @@ const Contact = () => {
 
                 {/* Resume Download */}
                 <div className="pt-6 border-t border-white/10">
-                  <button className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-accent-500 text-dark-900 rounded-xl font-semibold hover:neon-glow hover:scale-105 transition-all duration-300">
+                  <button onClick={handleDownload} className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-accent-500 text-dark-900 rounded-xl font-semibold hover:neon-glow hover:scale-105 transition-all duration-300">
                     <HiDownload className="w-5 h-5" />
                     Download Resume
                   </button>
