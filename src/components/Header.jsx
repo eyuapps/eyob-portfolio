@@ -87,7 +87,7 @@ const Header = ({ darkMode, setDarkMode }) => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white/10 dark:bg-dark-900/10 backdrop-blur-2xl border-b border-white/20 dark:border-white/10 shadow-2xl' 
+          ? 'bg-white/10 dark:bg-gray-900/10 backdrop-blur-2xl border-b border-white/20 dark:border-white/10 shadow-2xl' 
           : 'bg-transparent backdrop-blur-lg'
       }`}
     >

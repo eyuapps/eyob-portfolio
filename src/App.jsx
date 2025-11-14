@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark' : 'light'}`}>
-      <div className="relative bg-white dark:bg-dark-900 text-gray-900 dark:text-white overflow-hidden">
+      <div className="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-hidden">
         <FloatingShapes />
         
         <a href="#main" className="skip-to-content">

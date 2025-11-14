@@ -58,7 +58,7 @@ const About = () => {
             <div className="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
               {/* Gradient Border */}
               <div className="absolute inset-0 bg-gradient-to-br from-accent-500 via-purple-500 to-blue-500 rounded-3xl p-1">
-                <div className="w-full h-full bg-white dark:bg-dark-900 rounded-3xl"></div>
+                <div className="w-full h-full bg-white dark:bg-gray-900 rounded-3xl"></div>
               </div>
               
               {/* Main Image */}
