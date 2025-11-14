@@ -136,7 +136,7 @@ const Projects = () => {
               className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
                 activeFilter === filter
                   ? 'bg-gradient-to-r from-accent-500 to-purple-500 text-white shadow-lg shadow-accent-500/25'
-                  : 'bg-white/60 dark:bg-dark-800/60 backdrop-blur-sm text-gray-700 dark:text-gray-300 border border-white/20 dark:border-white/10 hover:shadow-lg'
+                  : 'bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-700 dark:text-gray-300 border border-white/20 dark:border-white/10 hover:shadow-lg'
               }`}
             >
               {filter}
