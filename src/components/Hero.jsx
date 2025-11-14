@@ -12,12 +12,7 @@ const Hero = () => {
     }
   }
 
-// const handleDownload = () => {
-//     const link = document.createElement("a");
-//     link.href = "/downloads/wdaseegzi.apk"; // use absolute path from public
-//     link.download = "wdaseegzi.apk";
-//     link.click();
-//   };
+
 
   return (
     <section
@@ -50,7 +45,7 @@ const Hero = () => {
             className="w-full lg:w-1/2 flex flex-col items-start space-y-6"
           >
             <div className="glass rounded-2xl px-6 py-5 shadow-lg w-full max-w-lg">
-              <p className="text-sm text-gray-400">Well Hello There, I am</p>
+              <p className="text-sm text-gray-400">Hello, I am</p>
               <h2 className="text-3xl font-bold text-accent-400">Eyob Tesfaye</h2>
             </div>
 

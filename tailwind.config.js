@@ -43,3 +43,15 @@ export default {
   },
   plugins: [],
 }
+
+module.exports = {
+  theme: {
+    extend: {
+      // tailwind.config.js
+fontFamily: {
+  'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+  'display': ['Poppins', 'ui-sans-serif', 'system-ui'],
+}
+    },
+  },
+}

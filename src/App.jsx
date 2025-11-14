@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
+import Certificates from './components/Certificates'
 import Technologies from './components/Technologies'
 import Projects from './components/Projects'
 import CaseStudy from './components/CaseStudy'
@@ -12,6 +13,7 @@ import Footer from './components/Footer'
 import BackToTop from './components/ui/BackToTop'
 import FloatingShapes from './components/ui/FloatingShapes'
 import './index.css'
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
@@ -75,6 +77,7 @@ function App() {
           <Hero />
           <About />
           <Skills />
+          <Certificates />
           <Technologies />
           <Projects />
           <CaseStudy />
