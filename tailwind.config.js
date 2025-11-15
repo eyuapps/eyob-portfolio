@@ -7,6 +7,12 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+
+       fontFamily: {
+        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+        'display': ['Poppins', 'ui-sans-serif', 'system-ui'],
+      },
+      
       colors: {
         // Accent palette now references CSS variables so light/dark modes can override via :root / .dark
         // Tailwind will use these RGB variable references; variables are defined in `src/index.css`.
@@ -42,18 +48,6 @@ export default {
     },
   },
   plugins: [],
-}
-
-module.exports = {
-  theme: {
-    extend: {
-      // tailwind.config.js
-fontFamily: {
-  'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-  'display': ['Poppins', 'ui-sans-serif', 'system-ui'],
-}
-    },
-  },
-}
 
 
+}
