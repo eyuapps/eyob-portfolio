@@ -135,16 +135,18 @@ const Header = ({ darkMode, setDarkMode }) => {
                   {item.name}
                 </button>
 
-               {activeSection === item.href && (
-  <motion.div
-    layoutId="activeSection"
-className="absolute left-6 translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-accent-500 to-purple-500 rounded-full"    transition={{ 
-      type: "spring", 
-      stiffness: 380, 
-      damping: 30 
-    }}
-  />
-)}
+                {/* Active Indicator */}
+                {activeSection === item.href && (
+                  <motion.div
+                    layoutId="activeSection"
+                    className="absolute left-0 right-0 w-full h-1 bg-gradient-to-r from-accent-500 to-purple-500 rounded-full"
+                    transition={{ 
+                      type: "spring", 
+                      stiffness: 380, 
+                      damping: 30 
+                    }}
+                  />
+                )}
               </motion.div>
             ))}
 
