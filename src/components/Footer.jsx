@@ -60,10 +60,11 @@ const Footer = () => {
             className="space-y-6"
           >
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-purple-500 rounded-2xl shadow-lg"></div>
-              <span className="text-2xl font-bold font-display bg-gradient-to-r from-white to-accent-400 bg-clip-text text-transparent">
-                Eyob Tesfaye
-              </span>
+               <img 
+                  src="assets/logo_white.png"
+                  alt="YOBTEX Logo" 
+                  className={"w-1/2 h-[70px] object-contain transition-opacity duration-300 -my-2"}
+                />
             </div>
             <p className="text-gray-100 dark:text-gray-300 text-sm leading-relaxed max-w-md">
               IT Student & Full-Stack Developer passionate about creating lightweight, 
