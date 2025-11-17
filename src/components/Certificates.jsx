@@ -8,69 +8,63 @@ const Certificates = () => {
   const certificates = [
     {
       id: 1,
-      title: 'Full-Stack Web Development',
-      issuer: 'Coursera',
-      date: '2024',
-      image: '/assets/certificates/fullstack.jpg',
-      skills: ['React', 'Node.js', 'MongoDB', 'Express'],
-      credentialUrl: 'https://coursera.org/verify/ABC123',
-      downloadUrl: '/certificates/fullstack-certificate.pdf',
-      category: 'Web Development'
+      title: 'Hackaton Competition Ranked Certificate',
+      issuer: 'Dire Dawa University',
+      date: '2025',
+      image: '/assets/certificates/hackaton certificate.jpg',
+      skills: ['React', 'JS','UI'],
+      downloadUrl: '/assets/certificates/hackaton certificate.jpg',
+      category: 'Competition' 
     },
     {
       id: 2,
-      title: 'Mobile App Development',
-      issuer: 'Google Developers',
+      title: 'E-commerce Website Development Competition', 
+      issuer: 'Solve IT',
       date: '2023',
-      image: '/assets/certificates/mobile-dev.jpg',
-      skills: ['Android', 'Kotlin', 'Firebase', 'Material Design'],
-      credentialUrl: 'https://developers.google.com/certification',
-      downloadUrl: '/certificates/mobile-certificate.pdf',
-      category: 'Mobile Development'
+      image: '/assets/certificates/solveit certificate.jpg',
+      skills: ['Wordpress', 'Innovative idea'],
+      downloadUrl: '/assets/certificates/solveit certificate.jpg',
+      category: 'Competition'
     },
     {
       id: 3,
-      title: 'UI/UX Design Fundamentals',
-      issuer: 'Interaction Design Foundation',
-      date: '2023',
-      image: '/assets/certificates/ui-ux.jpg',
-      skills: ['Figma', 'User Research', 'Wireframing', 'Prototyping'],
-      credentialUrl: 'https://www.interaction-design.org/certification',
-      downloadUrl: '/certificates/design-certificate.pdf',
-      category: 'Design'
+      title: '"Timhirt Bete Beje" Ranked 1st Certificate',
+      issuer: 'Dire Dawa TVET Agency',
+      date: '2021',
+      image: '/assets/certificates/technic cirtifcate.png',
+      skills: ['Android', 'Java', 'Firebase'],
+      downloadUrl: '/assets/certificates/technic cirtifcate.png',
+      category: 'Competition'
     },
     {
       id: 4,
-      title: 'Python for Data Science',
-      issuer: 'DataCamp',
-      date: '2023',
-      image: '/assets/certificates/data-science.jpg',
+      title: 'Python Development Completion Certificate',
+      issuer: 'Programming Hub',
+      date: '2021',
+      image: '/assets/certificates/python certificate.png',
       skills: ['Python', 'Pandas', 'NumPy', 'Data Visualization'],
-      credentialUrl: 'https://www.datacamp.com/certificate',
-      downloadUrl: '/certificates/datascience-certificate.pdf',
-      category: 'Data Science'
+      downloadUrl: '/assets/certificates/python certificate.png',
+      category: 'Course Compeletion'
     },
     {
       id: 5,
-      title: 'Cloud Computing Fundamentals',
-      issuer: 'AWS',
+      title: 'Web Development Certificate',
+      issuer: 'ETCoders (5 Million Coders)',
       date: '2022',
-      image: '/assets/certificates/cloud.jpg',
-      skills: ['AWS', 'Cloud Architecture', 'Serverless', 'DevOps'],
-      credentialUrl: 'https://aws.amazon.com/certification',
-      downloadUrl: '/certificates/cloud-certificate.pdf',
-      category: 'Cloud'
+      image: '/assets/certificates/web development certificate.png',
+      skills: ['HTML', 'CSS', 'Javascript'],
+      downloadUrl: '/assets/certificates/web development certificate.png',
+      category: 'Course Compeletion'
     },
     {
       id: 6,
-      title: 'Agile Project Management',
-      issuer: 'Scrum.org',
-      date: '2022',
-      image: '/assets/certificates/agile.jpg',
-      skills: ['Scrum', 'Agile Methodology', 'Project Planning', 'Team Leadership'],
-      credentialUrl: 'https://www.scrum.org/certificates',
-      downloadUrl: '/certificates/agile-certificate.pdf',
-      category: 'Project Management'
+      title: 'Basic Computer Skills Certificate',
+      issuer: 'EBS Computer Training Center',
+      date: '2015',
+      image: '/assets/certificates/ebs computer certificate.png',
+      skills: ['MS Word', 'MS Excel', 'MS PowerPoint', 'MS Publisher'],
+      downloadUrl: '/assets/certificates/ebs computer certificate.png',
+      category: 'Course Compeletion'
     }
   ]
 
@@ -229,16 +223,7 @@ const Certificates = () => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3 mt-auto pt-4">
-                      <a
-                        href={certificate.credentialUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center group/btn"
-                      >
-                        <HiExternalLink className="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300" />
-                        <span className="text-sm font-semibold">Verify</span>
-                      </a>
-                      
+                     
                       <button
                         onClick={() => setSelectedCertificate(certificate)}
                         className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-accent-500 to-purple-500 text-white rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center group/btn"
@@ -336,15 +321,7 @@ const Certificates = () => {
                     </div>
 
                     <div className="flex gap-3 pt-4">
-                      <a
-                        href={selectedCertificate.credentialUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center font-semibold"
-                      >
-                        <HiExternalLink className="w-4 h-4" />
-                        Verify Credential
-                      </a>
+                      
                       <a
                         href={selectedCertificate.downloadUrl}
                         download
