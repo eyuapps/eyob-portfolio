@@ -14,7 +14,7 @@ const Certificates = () => {
       date: '2025',
       image: '/assets/certificates/hackaton certificate.jpg',
       skills: ['React', 'JS','UI'],
-      downloadUrl: '/certificates/fullstack-certificate.pdf',
+      downloadUrl: '/assets/certificates/hackaton certificate.jpg',
       category: 'Competition' 
     },
     {
@@ -24,7 +24,7 @@ const Certificates = () => {
       date: '2023',
       image: '/assets/certificates/solveit certificate.jpg',
       skills: ['Wordpress', 'Innovative idea'],
-      downloadUrl: '/certificates/mobile-certificate.pdf',
+      downloadUrl:  '/assets/certificates/solveit certificate.jpg',
       category: 'Competition'
     },
     {
@@ -34,7 +34,7 @@ const Certificates = () => {
       date: '2021',
       image: '/assets/certificates/technic cirtifcate.png',
       skills: ['Android', 'Java', 'Firebase'],
-      downloadUrl: '/certificates/design-certificate.pdf',
+      downloadUrl: '/assets/certificates/technic cirtifcate.png',
       category: 'Competition'
     },
     {
@@ -44,7 +44,7 @@ const Certificates = () => {
       date: '2021',
       image: '/assets/certificates/python certificate.png',
       skills: ['Python', 'Pandas', 'NumPy', 'Data Visualization'],
-      downloadUrl: '/certificates/datascience-certificate.pdf',
+      downloadUrl: '/assets/certificates/python certificate.png',
       category: 'Course Compeletion'
     },
     {
@@ -54,7 +54,7 @@ const Certificates = () => {
       date: '2022',
       image: '/assets/certificates/web development certificate.png',
       skills: ['HTML', 'CSS', 'Javascript'],
-      downloadUrl: '/certificates/cloud-certificate.pdf',
+      downloadUrl:  '/assets/certificates/web development certificate.png',
       category: 'Course Compeletion'
     },
     {
@@ -64,7 +64,7 @@ const Certificates = () => {
       date: '2015',
       image: '/assets/certificates/ebs computer certificate.png',
       skills: ['MS Word', 'MS Excel', 'MS PowerPoint', 'MS Publisher'],
-      downloadUrl: '/certificates/agile-certificate.pdf',
+      downloadUrl: '/assets/certificates/ebs computer certificate.png',
       category: 'Course Compeletion'
     }
   ]
