@@ -184,52 +184,7 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        {/* Skills Overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-br from-white/80 to-white/40 dark:from-dark-800/80 dark:to-dark-700/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 dark:border-white/10 shadow-2xl"
-        >
-          <h3 className="text-3xl font-bold font-display mb-8 text-center bg-gradient-to-r from-gray-900 to-accent-600 dark:from-white dark:to-accent-400 bg-clip-text text-transparent">
-            Skill Development Journey
-          </h3>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {skills.map((skill) => (
-              <div key={skill.title} className="text-center group">
-                <div className="relative inline-block mb-4">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${skill.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <skill.icon className="w-10 h-10 text-white" />
-                  </div>
-                </div>
-                
-                <h4 className="font-bold font-display text-gray-900 dark:text-white mb-2 text-lg">
-                  {skill.title}
-                </h4>
-                
-                <div className="text-2xl font-bold font-display bg-gradient-to-r from-accent-500 to-purple-500 bg-clip-text text-transparent mb-2">
-                  {skill.progress}%
-                </div>
-                
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {skill.description}
-                </p>
-                
-                <div className="mt-3">
-                  <span className={`text-xs font-semibold px-3 py-1.5 rounded-full ${
-                    skill.level === 'Advanced' 
-                      ? 'bg-green-500/20 text-green-600 dark:text-green-400' 
-                      : 'bg-blue-500/20 text-blue-600 dark:text-blue-400'
-                  }`}>
-                    {skill.level}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )

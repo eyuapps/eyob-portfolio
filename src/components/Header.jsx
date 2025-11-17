@@ -15,6 +15,9 @@ const Header = ({ darkMode, setDarkMode }) => {
     { name: 'Contact', href: '#contact' },
   ]
 
+  const [language, setLanguage] = useState('en')
+
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
@@ -36,11 +39,52 @@ const Header = ({ darkMode, setDarkMode }) => {
       }
     }
 
+
+  const googleTranslateScript = document.createElement("script")
+  googleTranslateScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  document.body.appendChild(googleTranslateScript)
+
+  window.googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement({
+      pageLanguage: "en",
+      includedLanguages: "en,am",
+      autoDisplay: false
+    }, "google_translate_element")
+  }
+
+
+
+
+
+
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+
+  
+  useEffect(() => {
+  const select = document.querySelector(".goog-te-combo")
+  if (select) {
+    select.value = language === "en" ? "en" : "am"
+    select.dispatchEvent(new Event("change"))
+  }
+}, [language])
+
+
+
+useEffect(() => {
+  const int = setInterval(() => {
+    const select = document.querySelector(".goog-te-combo")
+    if (select) {
+      select.value = "am"
+      select.dispatchEvent(new Event("change"))
+      clearInterval(int)
+    }
+  }, 500)
+}, [])
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href)
@@ -71,15 +115,18 @@ const Header = ({ darkMode, setDarkMode }) => {
   }
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-white/10 dark:bg-gray-900/10 backdrop-blur-2xl border-b border-white/20 dark:border-white/10 shadow-2xl' 
-          : 'bg-transparent backdrop-blur-lg'
-      }`}
-    >
+   <motion.header
+  initial={{ y: -100 }}
+  animate={{ y: 0 }}
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    isScrolled 
+      ? 'bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 shadow-2xl' 
+      : 'bg-white/70 dark:bg-gray-900/70 backdrop-blur-2xl'
+  }`}
+>
+
+  <div id="google_translate_element" style={{ display: "none" }}></div>
+
       <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo Section - Compact but large logo */}
@@ -135,10 +182,11 @@ const Header = ({ darkMode, setDarkMode }) => {
                   {item.name}
                 </button>
 
-               {activeSection === item.href && (
+              {activeSection === item.href && (
   <motion.div
     layoutId="activeSection"
-className="absolute left-6 translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-accent-500 to-purple-500 rounded-full"    transition={{ 
+    className="absolute bottom-0 left-0 right-0 mx-auto w-2/3 h-1 bg-gradient-to-r from-accent-500 to-purple-500 rounded-full"
+    transition={{ 
       type: "spring", 
       stiffness: 380, 
       damping: 30 
@@ -167,6 +215,41 @@ className="absolute left-6 translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-accen
                 )}
               </motion.div>
             </motion.button>
+
+            {/* Language Selector */}
+<div className="relative">
+  <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    onClick={() => setLanguage(prev => prev === 'en' ? 'am' : 'en')}
+    className="p-2 rounded-full border border-white/30 dark:border-white/10 bg-white/20 dark:bg-dark-800/20 backdrop-blur-sm shadow-lg hover:border-accent-500/50 transition-all duration-300"
+  >
+    <img
+      src="https://flagcdn.com/w20/et.png"
+      alt="Ethiopia Flag"
+      className="w-6 h-6 rounded-full object-cover"
+    />
+  </motion.button>
+
+  {language !== 'en' && (
+    <div className="absolute top-12 right-0 w-32 bg-white dark:bg-gray-800 shadow-xl rounded-xl border border-gray-200 dark:border-gray-700 p-2 text-sm">
+      <button
+        onClick={() => setLanguage('en')}
+        className="w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+      >
+        English
+      </button>
+
+      <button
+        onClick={() => setLanguage('am')}
+        className="w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+      >
+        አማርኛ
+      </button>
+    </div>
+  )}
+</div>
+
           </div>
 
           {/* Mobile Menu Button */}

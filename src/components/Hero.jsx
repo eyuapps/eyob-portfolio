@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { HiArrowDown } from 'react-icons/hi'
-import { FaReact, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FaReact, FaLinkedinIn, FaTwitter, FaInstagram, FaTiktok, FaTelegram, FaGithub } from 'react-icons/fa'
 import { SiAndroid, SiNodedotjs, SiJavascript, SiTailwindcss } from 'react-icons/si'
 
 const Hero = () => {
@@ -45,9 +45,11 @@ const Hero = () => {
             className="w-full lg:w-1/2 flex flex-col items-start space-y-6"
           >
             <div className="glass rounded-2xl px-6 py-5 shadow-lg w-full max-w-lg">
-              <p className="text-sm text-gray-400">Hello, I am</p>
-              <h2 className="text-3xl font-bold text-accent-400">Eyob Tesfaye</h2>
-            </div>
+              <p className="text-sm text-gray-400 font-pacifico">Hello, I am</p>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-pacifico bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent pb-6 leading-tight">
+  Eyob Tesfaye
+</h2>
+</div>
 
             <div className="rounded-2xl px-6 py-5 shadow-sm w-full max-w-md border border-accent-400/25 bg-transparent">
               <p className="text-base text-gray-900 dark:text-white font-semibold">Building secure, user-first digital experiences.</p>
@@ -55,14 +57,23 @@ const Hero = () => {
 
             {/* Social row */}
             <div className="flex items-center gap-3">
-              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-blue-600 shadow" href="#" aria-label="LinkedIn">
-                <FaLinkedinIn className="w-4 h-4" />
-              </a>
-              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-sky-500 shadow" href="#" aria-label="Twitter">
-                <FaTwitter className="w-4 h-4" />
+
+             
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-cyan-600 shadow" href="#" aria-label="LinkedIn">
+                <FaTelegram className="w-4 h-4" />
               </a>
               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-pink-500 shadow" href="#" aria-label="Instagram">
                 <FaInstagram className="w-4 h-4" />
+              </a>
+              
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-700 shadow" href="https://github.com/yobtex" aria-label="LinkedIn">
+                <FaGithub className="w-4 h-4" />
+              </a>
+               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-900 shadow" href="#" aria-label="LinkedIn">
+                <FaTiktok className="w-4 h-4" />
+              </a>
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-blue-600 shadow" href="https://www.linkedin.com/in/yobtex/" aria-label="LinkedIn">
+                <FaLinkedinIn className="w-4 h-4" />
               </a>
             </div>
 

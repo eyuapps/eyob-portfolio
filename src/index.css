@@ -163,3 +163,11 @@
 .light .glass-dark * {
   color: inherit;
 }*/
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/assets/Pacifico.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+

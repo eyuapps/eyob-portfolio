@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiArrowUp } from 'react-icons/hi'
+import { FaLongArrowAltUp } from "react-icons/fa";
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -33,10 +34,10 @@ const BackToTop = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.6 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-accent-500 text-dark-900 rounded-full flex items-center justify-center neon-glow hover:scale-110 transition-all duration-300"
+          className="fixed bottom-8 right-8 z-40 w-12 h-12  bg-gradient-to-r from-accent-600 to-purple-500 text-light-100 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
           aria-label="Back to top"
         >
-          <HiArrowUp className="w-5 h-5" />
+          <FaLongArrowAltUp  className="w-5 h-5" />
         </motion.button>
       )}
     </AnimatePresence>
