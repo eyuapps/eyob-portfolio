@@ -154,40 +154,7 @@ const Technologies = () => {
           ))}
         </motion.div>
 
-        {/* Tech Stack Overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-br from-white/80 to-white/40 dark:from-dark-800/80 dark:to-dark-700/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 dark:border-white/10 shadow-2xl"
-        >
-          <h3 className="text-2xl font-bold font-display mb-8 text-center bg-gradient-to-r from-gray-900 to-accent-600 dark:from-white dark:to-accent-400 bg-clip-text text-transparent">
-            Tech Stack Overview
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: 'Frontend', techs: ['HTML5', 'CSS3', 'JavaScript'], gradient: 'from-blue-500 to-cyan-500' },
-              { title: 'Backend', techs: ['Java', 'Python', 'C++'], gradient: 'from-green-500 to-emerald-500' },
-              { title: 'Tools', techs: ['VS Code', 'Git', 'Android Studio'], gradient: 'from-purple-500 to-pink-500' },
-              { title: 'Design', techs: ['Figma', 'Photoshop', 'Illustrator'], gradient: 'from-orange-500 to-red-500' }
-            ].map((stack, index) => (
-              <div key={stack.title} className="text-center group">
-                <div className={`w-16 h-16 bg-gradient-to-br ${stack.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <FaCode className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-bold font-display text-gray-900 dark:text-white mb-3">{stack.title}</h4>
-                <div className="space-y-2">
-                  {stack.techs.map((tech) => (
-                    <div key={tech} className="text-sm text-gray-600 dark:text-gray-300 bg-white/50 dark:bg-white/5 rounded-xl py-2 backdrop-blur-sm border border-white/20">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )

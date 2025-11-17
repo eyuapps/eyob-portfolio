@@ -6,7 +6,7 @@ const CaseStudy = () => {
   const caseStudy = {
     title: 'Hospital Management System',
     description: 'A comprehensive solution for managing hospital operations, patient records, and staff coordination.',
-    image: '/src/assets/hospital-management.jpg',
+    image: '/assets/hospital-management.jpg',
     problem: "Hospitals faced challenges in managing patient records, appointments, and staff roles efficiently. Manual systems led to errors, delays, and security concerns.",
     solution: "Developed a robust C++ application with role-based access, secure file storage, and intuitive user interfaces for different hospital staff.",
     challenges: [

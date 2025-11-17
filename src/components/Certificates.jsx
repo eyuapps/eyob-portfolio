@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { HiExternalLink, HiDownload, HiAcademicCap, HiCalendar } from 'react-icons/hi'
+import { HiExternalLink, HiDownload, HiAcademicCap, HiCalendar, HiLockClosed } from 'react-icons/hi'
+import { IoCloseSharp } from "react-icons/io5";
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
@@ -13,7 +14,7 @@ const Certificates = () => {
       date: '2025',
       image: '/assets/certificates/hackaton certificate.jpg',
       skills: ['React', 'JS','UI'],
-      downloadUrl: '/assets/certificates/hackaton certificate.jpg',
+      downloadUrl: '/certificates/fullstack-certificate.pdf',
       category: 'Competition' 
     },
     {
@@ -23,7 +24,7 @@ const Certificates = () => {
       date: '2023',
       image: '/assets/certificates/solveit certificate.jpg',
       skills: ['Wordpress', 'Innovative idea'],
-      downloadUrl: '/assets/certificates/solveit certificate.jpg',
+      downloadUrl: '/certificates/mobile-certificate.pdf',
       category: 'Competition'
     },
     {
@@ -33,7 +34,7 @@ const Certificates = () => {
       date: '2021',
       image: '/assets/certificates/technic cirtifcate.png',
       skills: ['Android', 'Java', 'Firebase'],
-      downloadUrl: '/assets/certificates/technic cirtifcate.png',
+      downloadUrl: '/certificates/design-certificate.pdf',
       category: 'Competition'
     },
     {
@@ -43,7 +44,7 @@ const Certificates = () => {
       date: '2021',
       image: '/assets/certificates/python certificate.png',
       skills: ['Python', 'Pandas', 'NumPy', 'Data Visualization'],
-      downloadUrl: '/assets/certificates/python certificate.png',
+      downloadUrl: '/certificates/datascience-certificate.pdf',
       category: 'Course Compeletion'
     },
     {
@@ -53,7 +54,7 @@ const Certificates = () => {
       date: '2022',
       image: '/assets/certificates/web development certificate.png',
       skills: ['HTML', 'CSS', 'Javascript'],
-      downloadUrl: '/assets/certificates/web development certificate.png',
+      downloadUrl: '/certificates/cloud-certificate.pdf',
       category: 'Course Compeletion'
     },
     {
@@ -63,12 +64,12 @@ const Certificates = () => {
       date: '2015',
       image: '/assets/certificates/ebs computer certificate.png',
       skills: ['MS Word', 'MS Excel', 'MS PowerPoint', 'MS Publisher'],
-      downloadUrl: '/assets/certificates/ebs computer certificate.png',
+      downloadUrl: '/certificates/agile-certificate.pdf',
       category: 'Course Compeletion'
     }
   ]
 
-  const categories = ['All', 'Web Development', 'Mobile Development', 'Design', 'Data Science', 'Cloud', 'Project Management']
+  const categories = ['All', 'Competition', 'Course Compeletion']
 
   const [activeCategory, setActiveCategory] = useState('All')
 
@@ -224,6 +225,7 @@ const Certificates = () => {
                     {/* Action Buttons */}
                     <div className="flex gap-3 mt-auto pt-4">
                      
+                      
                       <button
                         onClick={() => setSelectedCertificate(certificate)}
                         className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-accent-500 to-purple-500 text-white rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center group/btn"
@@ -321,7 +323,17 @@ const Certificates = () => {
                     </div>
 
                     <div className="flex gap-3 pt-4">
+                    
+                      <a
+                      onClick={() => setSelectedCertificate(null)}
+                      className="flex items-center gap-2 px-6 py-3 bg-gray-200/60 dark:bg-dark-700/60 backdrop-blur-sm text-gray-700 dark:text-gray-300 rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center font-semibold"
+                      >
+                        <IoCloseSharp className="w-4 h-4" />
+                        Close Panel
+                      </a>
+
                       
+
                       <a
                         href={selectedCertificate.downloadUrl}
                         download
