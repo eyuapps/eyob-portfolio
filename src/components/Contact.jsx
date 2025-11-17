@@ -41,6 +41,7 @@ const Contact = () => {
     })
   }
 
+  //sending email
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -67,9 +68,10 @@ const Contact = () => {
       setIsSubmitting(false)
     }
   }
+//ended////////////
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('eyuapps@gmail.com')
+    navigator.clipboard.writeText('yobtex@gmail.com')
     // You can add a toast notification here
   }
 
@@ -128,7 +130,7 @@ const Contact = () => {
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-900 dark:text-white">Email</h4>
                     <div className="flex items-center gap-3">
-                      <p className="text-gray-600 dark:text-gray-300">eyuapps@gmail.com</p>
+                      <p className="text-gray-600 dark:text-gray-300">yobtex@gmail.com</p>
                       <button
                         onClick={copyEmail}
                         className="text-sm font-semibold bg-gradient-to-r from-accent-500 to-purple-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200"

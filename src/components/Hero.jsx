@@ -56,23 +56,23 @@ const Hero = () => {
             </div>
 
             {/* Social row */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-5">
 
              
-              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-cyan-600 shadow" href="#" aria-label="LinkedIn">
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-cyan-600 shadow" href="https://t.me/yobtex" target="_blank" aria-label="Telegram">
                 <FaTelegram className="w-4 h-4" />
               </a>
-              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-pink-500 shadow" href="#" aria-label="Instagram">
-                <FaInstagram className="w-4 h-4" />
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-pink-500 shadow" href="#" target="_blank" aria-label="Instagram">
+                <FaInstagram className="w-4 h-4" /> 
               </a>
               
-              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-700 shadow" href="https://github.com/yobtex" aria-label="LinkedIn">
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-700 shadow" href="https://github.com/yobtex" target="_blank" aria-label="Github">
                 <FaGithub className="w-4 h-4" />
               </a>
-               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-900 shadow" href="#" aria-label="LinkedIn">
+               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-900 shadow" href="#" aria-label="Tiktok">
                 <FaTiktok className="w-4 h-4" />
               </a>
-              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-blue-600 shadow" href="https://www.linkedin.com/in/yobtex/" aria-label="LinkedIn">
+              <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-blue-600 shadow" href="https://www.linkedin.com/in/yobtex/" target="_blank" aria-label="LinkedIn">
                 <FaLinkedinIn className="w-4 h-4" />
               </a>
             </div>
@@ -81,10 +81,11 @@ const Hero = () => {
             <div className="mt-2">
               <div className="hidden lg:flex flex-col items-start space-y-4">
                 {[
+                  { icon: <SiJavascript className="w-6 h-6 text-yellow-400" />, key: 'js' },
                   { icon: <FaReact className="w-6 h-6 text-sky-400" />, key: 'react' },
                   { icon: <SiTailwindcss className="w-6 h-6 text-cyan-400" />, key: 'tailwind' },
-                  { icon: <SiNodedotjs className="w-6 h-6 text-green-600" />, key: 'node' },
-                  { icon: <SiJavascript className="w-6 h-6 text-yellow-400" />, key: 'js' },
+                 
+                  
                   { icon: <SiAndroid className="w-6 h-6 text-green-400" />, key: 'android' },
                 ].map((it, idx) => (
                   <motion.div key={it.key} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: [0, -6, 0] }} transition={{ delay: 0.12 * idx, duration: 2, repeat: Infinity }} className="w-12 h-12 bg-white/90 dark:bg-dark-700 rounded-full flex items-center justify-center shadow-lg">

@@ -131,7 +131,7 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-100 dark:text-gray-300">
                     <a href="mailto:eyuapps@gmail.com" className="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 font-medium">
-                      eyuapps@gmail.com
+                      yobtex@gmail.com
                     </a>
                   </p>
                 </div>

@@ -40,17 +40,17 @@ const Header = ({ darkMode, setDarkMode }) => {
     }
 
 
-  const googleTranslateScript = document.createElement("script")
-  googleTranslateScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-  document.body.appendChild(googleTranslateScript)
+  // const googleTranslateScript = document.createElement("script")
+  // googleTranslateScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  // document.body.appendChild(googleTranslateScript)
 
-  window.googleTranslateElementInit = () => {
-    new window.google.translate.TranslateElement({
-      pageLanguage: "en",
-      includedLanguages: "en,am",
-      autoDisplay: false
-    }, "google_translate_element")
-  }
+  // window.googleTranslateElementInit = () => {
+  //   new window.google.translate.TranslateElement({
+  //     pageLanguage: "en",
+  //     includedLanguages: "en,am",
+  //     autoDisplay: false
+  //   }, "google_translate_element")
+  // }
 
 
 
@@ -65,26 +65,19 @@ const Header = ({ darkMode, setDarkMode }) => {
 
 
   
-  useEffect(() => {
-  const select = document.querySelector(".goog-te-combo")
-  if (select) {
-    select.value = language === "en" ? "en" : "am"
-    select.dispatchEvent(new Event("change"))
-  }
-}, [language])
 
 
 
-useEffect(() => {
-  const int = setInterval(() => {
-    const select = document.querySelector(".goog-te-combo")
-    if (select) {
-      select.value = "am"
-      select.dispatchEvent(new Event("change"))
-      clearInterval(int)
-    }
-  }, 500)
-}, [])
+// useEffect(() => {
+//   const int = setInterval(() => {
+//     const select = document.querySelector(".goog-te-combo")
+//     if (select) {
+//       select.value = "am"
+//       select.dispatchEvent(new Event("change"))
+//       clearInterval(int)
+//     }
+//   }, 500)
+// }, [])
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href)
@@ -125,7 +118,7 @@ useEffect(() => {
   }`}
 >
 
-  <div id="google_translate_element" style={{ display: "none" }}></div>
+  {/* <div id="google_translate_element" style={{ display: "none" }}></div> */}
 
       <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
@@ -216,7 +209,7 @@ useEffect(() => {
               </motion.div>
             </motion.button>
 
-            {/* Language Selector */}
+            {/* Language Selector
 <div className="relative">
   <motion.button
     whileHover={{ scale: 1.1 }}
@@ -248,7 +241,7 @@ useEffect(() => {
       </button>
     </div>
   )}
-</div>
+</div> */}
 
           </div>
 
