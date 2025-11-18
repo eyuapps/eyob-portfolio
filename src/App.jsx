@@ -31,7 +31,7 @@ function App() {
     }
 
     // Simulate loading
-    const timer = setTimeout(() => setIsLoading(false), 1000)
+    const timer = setTimeout(() => setIsLoading(false), 0)
     return () => clearTimeout(timer)
   }, [])
 
@@ -63,7 +63,7 @@ function App() {
   }
 
   return (
-    <div className={`flex flex-col min-h-screen transition-colors duration-300 ${darkMode ? 'dark' : 'light'}`}>
+    <div className={` min-h-screen transition-colors duration-300 ${darkMode ? 'dark' : 'light'}`}>
       <div className="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-hidden">
         <FloatingShapes />
         
