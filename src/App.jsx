@@ -17,7 +17,7 @@ import './index.css'
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     // Check user's system preference or saved preference
@@ -30,9 +30,11 @@ function App() {
       setDarkMode(systemPrefersDark)
     }
 
-    // Simulate loading
-    const timer = setTimeout(() => setIsLoading(false), 0)
-    return () => clearTimeout(timer)
+    // // Simulate loading
+    // const timer = setTimeout(() => setIsLoading(false), 0)
+    // return () => clearTimeout(timer)
+
+
   }, [])
 
   useEffect(() => {
