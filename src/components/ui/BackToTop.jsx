@@ -34,7 +34,7 @@ const BackToTop = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.6 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-40 w-12 h-12  bg-gradient-to-r from-accent-600 to-purple-500 text-light-100 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
+          className=" fixed bottom-6 right-6 z-50  w-12 h-12  bg-gradient-to-r from-accent-600 to-purple-500 text-light-100 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
           aria-label="Back to top"
         >
           <FaLongArrowAltUp  className="w-5 h-5" />

@@ -63,7 +63,7 @@ function App() {
   }
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark' : 'light'}`}>
+    <div className={`flex flex-col min-h-screen transition-colors duration-300 ${darkMode ? 'dark' : 'light'}`}>
       <div className="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-hidden">
         <FloatingShapes />
         
@@ -73,7 +73,7 @@ function App() {
 
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         
-        <main id="main">
+        <main className='flex-1' id="main">
           <Hero />
           <About />
           <Skills />
