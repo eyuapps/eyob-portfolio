@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  outline: 1px solid red;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 
 /* Accent color variables (RGB triplets) — light mode uses a higher-contrast blue, dark mode uses teal
    Values are defined as space-separated R G B so they can be used with the Tailwind rgb(var(--...) / <alpha>) pattern. */
