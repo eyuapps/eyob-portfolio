@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { HiExternalLink, HiDownload, HiAcademicCap, HiCalendar, HiLockClosed } from 'react-icons/hi'
+import { HiExternalLink, HiDownload, HiAcademicCap, HiCalendar, HiLockClosed, HiEye } from 'react-icons/hi'
 import { IoCloseSharp } from "react-icons/io5";
 
 const Certificates = () => {
@@ -230,7 +230,7 @@ const Certificates = () => {
                         onClick={() => setSelectedCertificate(certificate)}
                         className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-accent-500 to-purple-500 text-white rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center group/btn"
                       >
-                        <HiDownload className="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300" />
+                        <HiEye className="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300" />
                         <span className="text-sm font-semibold">View</span>
                       </button>
                     </div>
@@ -329,7 +329,7 @@ const Certificates = () => {
                       className="flex items-center gap-2 px-6 py-3 bg-gray-200/60 dark:bg-dark-700/60 backdrop-blur-sm text-gray-700 dark:text-gray-300 rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center font-semibold"
                       >
                         <IoCloseSharp className="w-4 h-4" />
-                        Close Panel
+                        Close
                       </a>
 
                       
@@ -340,7 +340,7 @@ const Certificates = () => {
                         className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-500 to-purple-500 text-white rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center font-semibold"
                       >
                         <HiDownload className="w-4 h-4" />
-                        Download PDF
+                        Download
                       </a>
                     </div>
                   </div>

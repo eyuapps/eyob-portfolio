@@ -42,33 +42,55 @@ const Contact = () => {
   }
 
   //sending email
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+ //sending email (repaired)
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      await emailjs.send(
-        'service_bw2x5sa',
-        'template_zpaheot',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_email: 'eyuapps@gmail.com'
-        },
-        'tHWrJJaFBS4ohqZME'
-      )
+  if (isSubmitting) return; // block double clicks
 
-      setIsSubmitted(true)
-      setFormData({ name: '', email: '', message: '' })
-    } catch (error) {
-      console.error('Failed to send email:', error)
-      alert('Failed to send message. Please try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
+  // manual validation (your UI validations are not enough)
+  if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    alert("Fill all fields before sending.");
+    return;
   }
+
+  // simple email pattern check
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(formData.email)) {
+    alert("Invalid email address.");
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const result = await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE,
+      import.meta.env.VITE_EMAILJS_TEMPLATE,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: "eyuapps@gmail.com",
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
+
+    if (result.status !== 200) {
+      throw new Error("EmailJS did not return success");
+    }
+
+    setIsSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
+  } catch (err) {
+    console.error("Email send failed:", err);
+    alert("Failed to send. Try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 //ended////////////
+
 
   const copyEmail = () => {
     navigator.clipboard.writeText('yobtex@gmail.com')
