@@ -112,8 +112,8 @@ const Hero = () => {
 
           {/* Right column: landing photo only (no icons) */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] rounded-3xl overflow-hidden shadow-2xl">
-              <img src="/assets/profile.jpg" alt="Eyob Tesfaye" className="w-full h-full object-cover" />
+            <div className="relative lg:w-[924] lg:h-[670] rounded-3xl overflow-hidden shadow-2xl">
+              <img src="/assets/office_pic.jpg" alt="Eyob Tesfaye" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </div>
