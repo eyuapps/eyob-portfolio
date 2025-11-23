@@ -7,64 +7,65 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All')
   const [selectedProject, setSelectedProject] = useState(null)
 
-  const filters = ['All', 'Mobile', 'Web', 'Graphics', 'Video']
+  const filters = ['All', 'Mobile', 'Web', 'Graphics']
 
   const projects = [
     {
       id: 1,
       title: 'Hospital Management System',
       description: 'A comprehensive hospital management system with doctor and receptionist roles, patient records, and file storage capabilities.',
-      category: 'Mobile',
-      technologies: ['C++', 'File I/O', 'OOP'],
+      category: 'Web',
+      technologies: ['php', 'File I/O', 'OOP'],
       image: '/assets/hospital-management.jpg',
       liveUrl: null,
-      codeUrl: 'https://github.com/your-username/hospital-management',
+      codeUrl: 'https://github.com/yobtex',
       gradient: 'from-blue-500 to-cyan-500',
       details: {
         problem: "Need for an efficient hospital management system to handle patient records, appointments, and staff roles.",
         role: "Full-stack Developer & System Architect",
-        technologies: ["C++", "File Storage System", "Object-Oriented Programming"],
+        technologies: ["php" , "File Storage System", "Object-Oriented Programming"],
         features: ["Doctor & Receptionist roles", "Patient record management", "Appointment scheduling", "File-based data storage"],
         challenges: ["Implementing secure file storage", "Managing user roles and permissions", "Optimizing data retrieval"],
-        solutions: ["Used C++ file streams for data persistence", "Implemented role-based access control", "Created efficient data structures for quick access"]
+        solutions: ["Used laravel file streams for data persistence", "Implemented role-based access control", "Created efficient data structures for quick access"]
       }
     },
     {
       id: 2,
-      title: 'Modern Dashboard',
-      description: 'A responsive admin dashboard built with React and Ant Design, featuring data visualization and user management.',
-      category: 'Web',
-      technologies: ['React', 'Ant Design', 'JavaScript'],
-      image: '/assets/modern-dashboard.jpg',
-      liveUrl: 'https://your-dashboard-demo.netlify.app',
-      codeUrl: 'https://github.com/your-username/modern-dashboard',
+      title: 'Beautyfull Banner',
+      description: 'Banner design for fast food restaurant promotion.',
+      category: 'Graphics',
+      technologies: ['Adobe Illustrator'],
+      liveUrl: null,
+      image: '/assets/mena.png',
+      codeUrl: 'https://yobtex.com/assets/mena.png',
       gradient: 'from-purple-500 to-pink-500',
       details: {
-        problem: "Businesses needed a modern, responsive dashboard to monitor metrics and manage users effectively.",
-        role: "Frontend Developer & UI Designer",
-        technologies: ["React", "Ant Design", "Chart.js", "CSS3"],
-        features: ["Responsive design", "Data visualization charts", "User management", "Dark/light mode"],
-        challenges: ["Creating responsive data visualizations", "Ensuring cross-browser compatibility", "Optimizing performance"],
-        solutions: ["Used Chart.js for responsive graphs", "Implemented CSS Grid and Flexbox", "Optimized React components with memoization"]
+        problem: "A fast food restaurant needed an eye-catching banner to promote their new menu items and attract more customers.",
+        role: "Graphic Designer",
+        technologies: ["Adobe Illustrator"],
+        features: ["Vibrant visuals", "Clear messaging", "Brand consistency"],
+        challenges: ["Time"],
+        solutions: ["Utilized Adobe Illustrator to create high-quality graphics", "Incorporated brand colors and logos", "Designed for both digital and print formats"]
       }
     },
     {
       id: 3,
-      title: 'POS System Concept',
-      description: 'Point of Sale system concept for kitchen materials shop, designed for both mobile and desktop platforms.',
-      category: 'Web',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      image: '/assets/pos-concept.jpg',
+      title: 'ትምህርት ቤቴ በእጄ',
+      description: 'Student management systems offer comprehensive gradebooks where teachers can enter and manage grades',
+      category: 'Mobile',
+      technologies: ['Java', 'Android Studio', 'Firebase'],
+      image: '/assets/tmhrtbete.png',
       liveUrl: null,
-      codeUrl: 'https://github.com/your-username/pos-system',
+      codeUrl: 'https://github.com/yobtex',
       gradient: 'from-green-500 to-emerald-500',
       details: {
-        problem: "Small businesses needed an affordable POS system tailored for kitchen materials inventory and sales.",
-        role: "Full-stack Developer & UX Designer",
-        technologies: ["React", "Node.js", "MongoDB", "Express"],
-        features: ["Inventory management", "Sales tracking", "Receipt generation", "Multi-platform support"],
-        challenges: ["Designing intuitive inventory management", "Handling real-time sales data", "Creating responsive design"],
-        solutions: ["Developed custom React components", "Used Socket.io for real-time updates", "Implemented Progressive Web App features"]
+        problem: "Schools need efficient student management systems to handle grades, attendance, and student information digitally.",
+        role: "Lead Mobile Developer",
+        technologies: ['Java', 'Android Studio', 'Firebase'],
+        features: ["Student Monitoring", "Grade System", "Attendance System", "Easy to use"],
+        challenges: ["Integrating real-time database updates", "Ensuring data security and privacy", "Creating an intuitive user interface"],
+        solutions: ["Used Firebase for real-time data synchronization", "Implemented authentication and data encryption", "Designed user-friendly layouts and navigation" ]
+      
       }
     }
   ]

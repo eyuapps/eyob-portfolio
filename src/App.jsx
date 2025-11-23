@@ -82,7 +82,7 @@ function App() {
           <Certificates />
           <Technologies />
           <Projects />
-          <CaseStudy />
+          {/* <CaseStudy /> */}
           <Contact />
         </main>
 
