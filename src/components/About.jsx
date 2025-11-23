@@ -126,8 +126,8 @@ const About = () => {
               </div>
 
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                I'm Eyob Tesfaye — an IT student at Dire Dawa University who enjoys building simple, fast, and user-friendly digital products. I work across mobile development, web design, graphics, and video editing.
-                My focus is always the same: keep it clean, keep it functional, keep it reliable.
+                I'm Eyob Tesfaye an IT student at Dire Dawa University who enjoys building simple, fast, and user friendly digital products. I work across mobile development, web design, graphics, and video editing.
+                My focus is always the same keep it clean, keep it functional, keep it reliable.
               </p>
             </motion.div>
 
