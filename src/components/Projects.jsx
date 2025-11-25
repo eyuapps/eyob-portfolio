@@ -229,7 +229,7 @@ const Projects = () => {
                         className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 flex-1 justify-center group"
                       >
                         <HiCode className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                        <span className="text-sm font-semibold">Code</span>
+                        <span className="text-sm font-semibold">View</span>
                       </a>
                       
                       <button
