@@ -69,7 +69,7 @@ const Hero = () => {
               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-700 shadow" href="https://github.com/yobtex" target="_blank" aria-label="Github">
                 <FaGithub className="w-4 h-4" />
               </a>
-               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-900 shadow" href="https://www.tiktok.com/@yobtex" aria-label="Tiktok">
+               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-dark-900 shadow" href="https://www.tiktok.com/@yobtex"  target="_blank" aria-label="Tiktok">
                 <FaTiktok className="w-4 h-4" />
               </a>
               <a className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-blue-600 shadow" href="https://www.linkedin.com/in/yobtex/" target="_blank" aria-label="LinkedIn">
