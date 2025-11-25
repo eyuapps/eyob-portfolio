@@ -116,7 +116,7 @@ const Projects = () => {
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-accent-500 to-purple-500 mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto text-lg">
-            A collection of projects showcasing my skills across different domains and technologies
+            A collection of projects showcasing my skills across different domains and technologies But these are sample projects, more projects will be uploaded when they are organized
           </p>
         </motion.div>
 
